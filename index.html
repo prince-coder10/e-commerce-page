@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+
+  <body>
+    <div class="body" role="doc-cover" id="body">
+      <section class="header__container">
+        <header>
+          <span class="menu__container" id="menu">
+            <img
+              src="./images/icon-menu.svg"
+              alt="menu"
+              class="menu"
+              role="img"
+            />
+          </span>
+          <h1 class="logo">sneakers</h1>
+          <nav class="navigation" role="navigation">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+
+          <img
+            src="./images/icon-cart.svg"
+            alt="cart"
+            class="cart"
+            role="img"
+            id="cart--main"
+          />
+          <span class="profile">
+            <img
+              src="./images/image-avatar.png"
+              alt="profile picture"
+              class="profile-pic"
+              role="img"
+            />
+          </span>
+        </header>
+        <div class="mobile__menu">
+          <nav class="navigation__mobile" role="navigation" id="nav-mobile">
+            <span class="menu-close">
+              <img
+                src="./images/icon-close.svg"
+                alt="X"
+                class="close-menu-btn"
+                role="img"
+                id="menu_close"
+              />
+            </span>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+        <div class="cart__popup hidden" id="cart__popup">
+          <div class="cart-header"><strong>Cart</strong></div>
+          <div id="hide">
+            <div class="cart-overview">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="product"
+                class="popup-img"
+              />
+              <p>
+                Fall Limited Edition Sneakers<br />
+                <span id="p-f-1">0</span> x <span id="p-count">0</span>
+                <span id="p-total">0</span>
+              </p>
+              <button class="delete" id="delete">
+                <img
+                  src="./images/icon-delete.svg"
+                  alt="delete"
+                  role="img"
+                  class="delete-btn"
+                />
+              </button>
+            </div>
+            <button class="checkout" id="checkout">Checkout</button>
+          </div>
+          <div class="hidden" id="if-empty">
+            <p>Your cart is empty.</p>
+          </div>
+        </div>
+      </section>
+      <section class="shopping__item" role="contentinfo">
+        <div class="item__display">
+          <div class="active__item" id="active__item"><!-- active --></div>
+          <div class="lightbox" id="lightbox">
+            <span class="exit" id="close">
+              <button style="all: unset; z-index: 100">
+                <img
+                  src="./images/icon-close.svg"
+                  class="close"
+                  alt="close"
+                  role="img"
+                />
+              </button>
+            </span>
+            <span class="prev">
+              <button id="prev" style="all: unset">
+                <img
+                  src="./images/icon-previous.svg"
+                  alt="previous"
+                  role="img"
+                  draggable="false"
+                  class="previous"
+                />
+              </button>
+            </span>
+            <span class="nxt">
+              <button id="nxt" style="all: unset">
+                <img
+                  src="./images/icon-next.svg"
+                  alt="next"
+                  draggable="false"
+                  role="img"
+                  class="next"
+                />
+              </button>
+            </span>
+            <div class="item__images">
+              <span class="item-1">
+                <button id="item-1">
+                  <img
+                    src="./images/image-product-1-thumbnail.jpg"
+                    alt="shoe image"
+                    role="img"
+                    class="thumbnail-1 items1"
+                  />
+                </button>
+              </span>
+              <span class="item-2">
+                <button id="item-2">
+                  <img
+                    src="./images/image-product-2-thumbnail.jpg"
+                    alt="shoe image"
+                    role="img"
+                    class="thumbnail-2 items1"
+                  />
+                </button>
+              </span>
+              <span class="item-3">
+                <button id="item-3">
+                  <img
+                    src="./images/image-product-3-thumbnail.jpg"
+                    alt="shoe image"
+                    role="img"
+                    class="thumbnail-3 items1"
+                  />
+                </button>
+              </span>
+              <span class="item-4">
+                <button id="item-4">
+                  <img
+                    src="./images/image-product-4-thumbnail.jpg"
+                    alt="shoe image"
+                    role="img"
+                    class="thumbnail-4 items1"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="item__images">
+            <span class="item-1">
+              <button id="item-1">
+                <img
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="shoe image"
+                  role="img"
+                  class="thumbnail-1 items"
+                />
+              </button>
+            </span>
+            <span class="item-2">
+              <button id="item-2">
+                <img
+                  src="./images/image-product-2-thumbnail.jpg"
+                  alt="shoe image"
+                  role="img"
+                  class="thumbnail-2 items"
+                />
+              </button>
+            </span>
+            <span class="item-3">
+              <button id="item-3">
+                <img
+                  src="./images/image-product-3-thumbnail.jpg"
+                  alt="shoe image"
+                  role="img"
+                  class="thumbnail-3 items"
+                />
+              </button>
+            </span>
+            <span class="item-4">
+              <button id="item-4">
+                <img
+                  src="./images/image-product-4-thumbnail.jpg"
+                  alt="shoe image"
+                  role="img"
+                  class="thumbnail-4 items"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="product__info">
+          <span class="intro">
+            <p>Sneaker Company</p>
+          </span>
+          <span class="product__name">
+            <h1>Fall Limited Edition Sneakers</h1>
+          </span>
+          <div class="product__description">
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          </div>
+          <div class="price">
+            <span class="discount">
+              <h1>$125.00</h1>
+              <span class="off"><p>50%</p></span>
+            </span>
+            <span class="orign-price"><p>$250.00</p></span>
+          </div>
+          <div class="cart__buttons">
+            <div class="count">
+              <button id="plus">
+                <img
+                  src="./images/icon-plus.svg"
+                  alt="+"
+                  role="img"
+                  class="add"
+                />
+              </button>
+              <span class="count_number" id="count">0</span>
+              <button id="minus">
+                <img
+                  src="./images/icon-minus.svg"
+                  alt="-"
+                  role="img"
+                  class="minus"
+                />
+              </button>
+            </div>
+            <div class="add-to-cart">
+              <button id="add-cart" class="add-cart">
+                <img
+                  src="./images/icon-cart.svg"
+                  alt="cart"
+                  role="img"
+                  class="cart2"
+                />
+                <p>Add to cart</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div> -->
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
